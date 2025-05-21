@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Photo feed</title>
+  </head>
+  <body class>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid d-flex">
+            <p class="navbar-brand text-body-black fw-semibold m-0"><i class="fa-brands fa-instagram fs-3"></i> Instagram</p>
+            <form class="d-flex justify-content-end">
+                <button class="btn btn-success me-2" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Create a new post</button>
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Create a new post</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="caption" class="col-form-label">Caption:</label>
+                            <textarea placeholder="Add the caption of your post here" class="form-control" id="caption"></textarea>
+                            <button class="btn btn-light border border-dark-subtle"><i class="fa-solid fa-camera"></i></button>
+                            <button class="btn btn-light border border-dark-subtle"><i class="fa-solid fa-location-dot"></i></button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success">Publish</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container-fluid d-flex justify-content-center align-items-center my-2">
+        <div class="nav nav-pills" role="tablist">
+            <button class="nav-link bg-transparent active" data-bs-toggle="tab" 
+            data-bs-target="#view1" aria-selected="true">
+                <i class="fa-solid fa-table-cells"></i>
+            </button>
+            <button class="nav-link bg-transparent" data-bs-toggle="tab" 
+            data-bs-target="#view2" aria-selected="false">
+                <i class="fa-solid fa-square"></i>
+            </button>
+        </div>
+    </div>
+    <style>
+        .nav-link i {
+        color: #898d90;          
+        transition: color 0.2s;
+        }
+        .nav-link.active i {
+        color: #0d6efd;          
+        }
+    </style>
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active " id="view1">
+            <div class="d-flex flex-wrap justify-content-evenly align-items-evenly" >
+                <div class="ratio ratio-1x1 my-1" style="max-width: 32%;">
+                    <img class="object-fit-cover" src="https://www.lanacion.com.ar/resizer/v2/los-canes-tienen-una-gran-capacidad-auditiva-que-DG6RMFEFBRHULFQAT6KOGAAHUU.jpg?auth=564c4ecab53f311fc6031eefdf60d1c43430b8ae791e3fe387be500240ccc234&width=880&height=586&quality=70&smart=true">
+                </div>
+                <div class="ratio ratio-1x1 my-1" style="max-width: 32%;">
+                    <img class="object-fit-cover" src="https://abastanimacio.org/wp-content/uploads/2023/03/Abast-Escuela-animacion-formacion-juvenil-1.jpg">
+                </div>
+                <div class="ratio ratio-1x1 my-1" style="max-width: 32%;">
+                    <img class="object-fit-cover" src="https://elarmariodesofia.com/wp-content/uploads/7-cosas-que-debes-saber-si-te-vas-de-escapada-a-croacia.jpg">
+                </div>
+                <div class="ratio ratio-1x1 my-1" style="max-width: 32%;">
+                    <img class="object-fit-cover" src="https://elefantezen.com/wp-content/uploads/2020/06/carcajadas.jpg">
+                </div>
+                <div class="ratio ratio-1x1 my-1" style="max-width: 32%;">
+                    <img class="object-fit-cover" src="https://s.alicdn.com/@sc04/kf/Hf30297f1d94b41a5956de9d8e3700df1o.jpg_720x720q50.jpg">
+                </div>
+                <div class="ratio ratio-1x1 my-1" style="max-width: 32%;">
+                    <img class="object-fit-cover" src="https://i.pinimg.com/474x/78/a0/34/78a03472da5a6b053698d443607ff3ec.jpg">
+                </div>
+                <div class="ratio ratio-1x1 my-1" style="max-width: 32%;">
+                    <img class="object-fit-cover" src="https://static.wixstatic.com/media/99e595_ee5dad1382844821936aa56a7aafdf4c~mv2.jpg/v1/fill/w_740,h_494,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/99e595_ee5dad1382844821936aa56a7aafdf4c~mv2.jpg">
+                </div>
+                <div class="ratio ratio-1x1 my-1" style="max-width: 32%;">
+                    <img class="object-fit-cover" src="https://www.cloudmasters.es/wp-content/uploads/2022/10/python-1024x576.jpg">
+
+                </div>
+                <div class="ratio ratio-1x1 my-1" style="max-width: 32%;">
+                    <img class="object-fit-cover" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT8N6MZ_YvPcsEoOrAAAKmfpviz6HpgTVKuDlsS91eYWwjPrUm9">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="view2">
+            <div class="d-flex flex-column justify-content-evenly align-items-center" >
+                <div class="container w-50 border border-light-subtle p-0 m-2";>
+                    <div class="d-flex align-items-start justify-content-between p-2">
+                        <h4 class="p-1">My Crazy dog Spark!</h4>
+                        <p>08/26</p>
+                    </div>
+                    <img class="w-100 h-100" src="https://www.lanacion.com.ar/resizer/v2/los-canes-tienen-una-gran-capacidad-auditiva-que-DG6RMFEFBRHULFQAT6KOGAAHUU.jpg?auth=564c4ecab53f311fc6031eefdf60d1c43430b8ae791e3fe387be500240ccc234&width=880&height=586&quality=70&smart=true">
+                    <p class="p-2"><strong>204 likes</strong><br>
+                    This is an example of a very good photo that you can post on instagram</p>
+                </div>
+                <div class="container w-50 border border-light-subtle p-0 m-2";>
+                    <div class="d-flex align-items-start justify-content-between p-2">
+                        <h4 class="p-1">The greatness of Croatia</h4>
+                        <p>04/09</p>
+                    </div>
+                    <img class="w-100 h-100" src="https://elarmariodesofia.com/wp-content/uploads/7-cosas-que-debes-saber-si-te-vas-de-escapada-a-croacia.jpg">
+                    <p class="p-2"><strong>26985 likes</strong><br>
+                    This is an example of a very good photo that you can post on instagram</p>
+                </div>
+                <div class="container w-50 border border-light-subtle p-0 m-2";>
+                    <div class="d-flex align-items-start justify-content-between p-2">
+                        <h4 class="p-1">Amazing GOAL by Cristiano!</h4>
+                        <p>06/10</p>
+                    </div>
+                    <img class="w-100" src="https://i.pinimg.com/474x/78/a0/34/78a03472da5a6b053698d443607ff3ec.jpg">      
+                    <p class="p-2"><strong>894613 likes</strong><br>
+                    This is an example of a very good photo that you can post on instagram</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  </body>
+</html>
